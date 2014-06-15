@@ -102,7 +102,7 @@ $(function($, window) {
 			baseConfig.loadPage.urls.push(urlPath);
 			
 			$this
-			.bind(_setting.bind, function(e){
+			.bind(_settings.bind, function(e){
 				e.preventDefault();
 				token = new Date().getTime();
 				location.hash = url+_settings.tokenFlag+token; // 加上 timestamp 讓每次 click 都能觸動 hash 的更新
