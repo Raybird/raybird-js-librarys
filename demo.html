@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div id='main'></div>
+<div class='hashload' data-url='show.html'>show.html</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="hashaction/jquery.hashAction.js"></script>
+<script>
+$(document).ready(function(){
+	var options = {
+			targetView: $("#main"),
+	};
+	$(".hashload").loadPage();
+	
+});
+</script>
+</body>
+</html>
