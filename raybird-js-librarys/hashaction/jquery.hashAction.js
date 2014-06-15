@@ -73,6 +73,7 @@ $(function($, window) {
 		        callback: function () {},		// 執行完畢要另外執行的 callback
 		        targetView: $("#page-wrapper"),	// 目標更新頁面
 		        tokenFlag: "#~",				// url 顯示區隔 time token 的hash標記
+		        bind: 'click',
 		    },
 		_settings = $.extend(_defaultSettings, settings),
 		
@@ -101,7 +102,7 @@ $(function($, window) {
 			baseConfig.loadPage.urls.push(urlPath);
 			
 			$this
-			.on('click', function(e){
+			.bind(_setting.bind, function(e){
 				e.preventDefault();
 				token = new Date().getTime();
 				location.hash = url+_settings.tokenFlag+token; // 加上 timestamp 讓每次 click 都能觸動 hash 的更新
